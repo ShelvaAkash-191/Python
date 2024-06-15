@@ -1,0 +1,25 @@
+def merge_arrays(arr1, arr2):
+    # Merge the arrays
+    merged_array = arr1 + arr2
+    
+    # Remove duplicates by converting the merged array to a set and then back to a list
+    merged_array = list(set(merged_array))
+    
+    # Sort the merged array
+    merged_array.sort()
+    
+    return merged_array
+
+# Input array 1
+N1 = int(input())
+array1 = [int(input()) for _ in range(N1)]
+
+# Input array 2
+N2 = int(input())
+array2 = [int(input()) for _ in range(N2)]
+
+# Merge and sort the arrays
+merged_array = merge_arrays(array1, array2)
+
+# Output the merged array
+print(" ".join(map(str, merged_array)))
