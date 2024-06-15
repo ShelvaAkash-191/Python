@@ -1,0 +1,7 @@
+b=int(input())
+i=b+b*4/100
+i1=i+i*4/100
+i2=i1+i1*4/100
+print("Balance as of end of Year 1: $%.2f."%i)
+print("Balance as of end of Year 2: $%.2f."%i1)
+print("Balance as of end of Year 3: $%.2f."%i2)
