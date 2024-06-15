@@ -1,0 +1,21 @@
+def find_mapping(A, B):
+    # Create a dictionary to store the indices of elements in B
+    index_map = {value: index for index, value in enumerate(B)}
+    
+    # Use list comprehension to find the indices of elements in A using the dictionary
+    mapping = [index_map[value] for value in A]
+    
+    return mapping
+
+# Input sizes of lists A and B
+n = int(input())
+
+# Input elements of lists A and B
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
+
+# Find the mapping
+mapping = find_mapping(A, B)
+
+# Output the mapping
+print(*mapping)
