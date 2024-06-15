@@ -1,0 +1,16 @@
+# Input array length and elements
+n = int(input())
+arr = [int(input()) for _ in range(n)]
+
+# Create a set to store unique elements
+distinct_elements = set()
+
+# Iterate through the array and add elements to the set
+for num in arr:
+    distinct_elements.add(num)
+
+# Convert the set to a list and sort it for consistent output
+distinct_elements = sorted(list(distinct_elements))
+
+# Print the distinct elements
+print(*distinct_elements)
