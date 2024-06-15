@@ -1,0 +1,33 @@
+def find_locations(arr, element):
+    # Initialize variables to store locations and count of occurrences
+    locations = []
+    count = 0
+    
+    # Iterate through the list
+    for i in range(len(arr)):
+        # If the element is found, add its location to the locations list and increment the count
+        if arr[i] == element:
+            locations.append(i + 1)  # Adding 1 to convert zero-based index to one-based index
+            count += 1
+    
+    return locations, count
+
+# Input size of the list
+n = int(input())
+
+# Input the list elements
+arr = [int(input()) for _ in range(n)]
+
+# Input the element to search
+element = int(input())
+
+# Find the locations and count of occurrences of the element
+locations, count = find_locations(arr, element)
+
+# Output the locations and count
+if count > 0:
+    for location in locations:
+        print(f"{element} is present at location {location}.")
+    print(f"{element} is present {count} times in the array.")
+else:
+    print(f"{element} is not present in the array.")
