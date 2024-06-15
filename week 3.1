@@ -1,0 +1,16 @@
+a=float(input()) 
+tot=0 
+if a<200:
+    tot=a*1.2
+elif a>=200 and a<400:
+    tot=a*1.5 
+elif a>=400 and a<600: 
+    tot=a*1.8 
+elif a>=600: 
+    tot=a*2 
+if tot<100: 
+    print("100.00") 
+elif tot>400: 
+    print(f"{tot+tot*0.15:.2f}") 
+else: 
+    print(f"{tot:.2f}")
