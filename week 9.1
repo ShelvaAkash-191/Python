@@ -1,0 +1,25 @@
+def differenceSum(input_number):
+    # Initialize sums for odd and even positions
+    odd_sum = 0
+    even_sum = 0
+
+    # Iterate through the digits of the input number
+    for i, digit in enumerate(input_number):
+        if i % 2 == 0:
+            # Even position
+            even_sum += int(digit)
+        else:
+            # Odd position
+            odd_sum += int(digit)
+
+    # Calculate the absolute difference
+    return abs(even_sum - odd_sum)
+
+try:
+    # Accept input from the user
+    input_number = input("Enter a number: ")
+
+    # Call the function and print the result
+    print(differenceSum(input_number))
+except ValueError:
+    print("Invalid input. Please enter a valid number.")
