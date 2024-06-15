@@ -1,0 +1,12 @@
+no_of_shoes=int(input())
+size=input().split()
+size=[int(x) for x in size]
+customers=int(input())
+total=0
+for i in range(customers):
+    new=input().split()
+    new=[int(x) for x in new]
+    if new[0] in size:
+        size.remove(new[0])
+        total+=new[-1]
+print(total)
