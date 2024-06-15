@@ -1,0 +1,13 @@
+a = int(input())
+c=0
+num=0
+for i in range(a+1):
+    b = input().split()
+    #print('b: ',b)
+    #print('num: ',num)
+    #print('c: ',c)
+    try:
+        num = b.index('MARKS')
+    except:
+        c+=int(b[num])
+print(f'%.2f'%(c/a))
